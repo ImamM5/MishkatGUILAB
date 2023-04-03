@@ -167,7 +167,15 @@ public class SimpleGUI extends JFrame implements ActionListener, ItemListener, C
                 welcomeLabel.setText("Reset pressed!");
             } else if (text.equals("Open"))
             {
-                JFrame neFrame =
+                JFrame newFrame = new JFrame("Look at me!");
+                newFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                newFrame.setSize(200, 150);
+                newFrame.setLocation(350, 75);
+                JLabel helloLabel = new JLabel("HELLO!!");
+                JPanel panel = new JPanel();
+                panel.add(helloLabel);
+                newFrame.add(panel, BorderLayout.NORTH);
+                newFrame.setVisible(true);
             }
         }
         else if (source instanceof JMenuItem){
